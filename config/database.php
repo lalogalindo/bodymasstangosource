@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db4free.net'),
+            'host' => env('DB_HOST', 'mercsoft.mx'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'bodymass_test'),
-            'username' => env('DB_USERNAME', 'egalindo'),
-            'password' => env('DB_PASSWORD', 'eGalindo1.'),
+            'database' => env('DB_DATABASE', 'bodymass_tangosource'),
+            'username' => env('DB_USERNAME', 'remote'),
+            'password' => env('DB_PASSWORD', 'soporte'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
