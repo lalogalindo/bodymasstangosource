@@ -39,8 +39,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Bootstrap Slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.2/bootstrap-slider.min.js"></script>
+  <!-- jQuery Block -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
   <!-- Laravel Bootstrap -->
   <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
   @yield('script')
+
+  <script>
+    $(document).on('submit',function(){
+      $.blockUI({
+        message: '<h1><img src="https://i.imgur.com/T3Ht7S3.gif" width="100px" /> Just a moment...</h1>',
+        css: {
+          backgroundColor: "#fafaf5"
+        }
+      });
+    })
+  </script>
 </body>
 </html>
