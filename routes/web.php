@@ -19,6 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/calculator', 'HomeController@calculator')->name('calculator');
+Route::get('/records/{user}', 'HomeController@records')->name('records');
 
-Route::get('/historic', 'HomeController@index')->name('historic');
+Route::get('/calculator', 'HomeController@calculator')->name('calculator');

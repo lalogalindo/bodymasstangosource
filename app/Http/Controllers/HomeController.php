@@ -26,6 +26,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function records(\App\User $user)
+    {
+        return view('records', compact('user'));
+    }
+
     public function calculator()
     {
         return view('calculator');
