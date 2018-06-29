@@ -8,6 +8,7 @@
 @endsection
 @section('content')
 <div class="container">
+  @if( empty($status) )
   <div class="row justify-content-center">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-default">
@@ -17,6 +18,10 @@
           In order to use the Body Mass Calculator, you must sign in.
           @else
           <p>Please, enter your height and weight.</p>
+          <form method="post" action="{{ route('newRecord') }}">
+            {{ csrf_field() }}
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
           @component('calculator.input',[
             'title' => 'Height',
             'inputID' => 'height',
@@ -26,7 +31,8 @@
             'sliderMax' => '250',
             'sliderStep' => '1',
             'sliderValue' => '170',
-            'addOn' => 'cm'
+            'addOn' => 'cm',
+            'step' => '1'
           ])
           @endcomponent
 
@@ -39,18 +45,32 @@
             'sliderMax' => '200',
             'sliderStep' => '0.1',
             'sliderValue' => '80',
-            'addOn' => 'kg'
+            'addOn' => 'kg',
+            'step' => '0.1'
           ])
           @endcomponent
 
-        </div>
-        <div class="panel-footer text-right">
-          <button type="button" class="btn btn-primary">Calculate</button>
+            <div class="panel-footer text-right">
+              <button type="submit" class="btn btn-primary">Calculate</button>
+            </div>
+          </form>
           @endguest
         </div>
       </div>
     </div>
   </div>
+  @else
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">Body Mass Calculator</div>
+        <div class="panel-body">
+          Hola
+        </div>
+      </div>
+    </div>
+  </div>
+  @endif
 </div>
 @endsection
 

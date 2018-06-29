@@ -20,9 +20,9 @@
               <th>BMI</th>
             </thead>
             <tbody>
-              @foreach($user->records as $record)
+              @foreach($user->records->reverse() as $record)
               <tr>
-                <td>{{ $record->created_at }}</td>
+                <td>{{ $record->created_at->diffForHumans() }}</td>
                 <td>{{ $record->kilograms }} kg</<td>
                 <td>{{ $record->centimeters }} cm</<td>
                 <td>{{ $record->kilograms / ( ($record->centimeters/100)*($record->centimeters/100) ) }}</td>

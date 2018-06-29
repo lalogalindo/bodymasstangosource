@@ -11,7 +11,7 @@
     </div>
     <div class="col-xs-5">
       <div class="input-group">
-        <input type="number" id="{{ $inputID }}" class="form-control" value="{{ $sliderValue }}">
+        <input name="{{ $inputID }}" type="number" id="{{ $inputID }}" class="form-control" value="{{ $sliderValue }}" step="{{ $step }}">
         <span class="input-group-addon" id="basic-addon2">{{ $addOn }}</span>
       </div>
     </div>

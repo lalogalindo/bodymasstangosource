@@ -21,4 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/records/{user}', 'HomeController@records')->name('records');
 
+Route::post('/records','HomeController@newRecord')->name('newRecord');
+
 Route::get('/calculator', 'HomeController@calculator')->name('calculator');
