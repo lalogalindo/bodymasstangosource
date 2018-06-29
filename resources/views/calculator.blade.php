@@ -65,7 +65,8 @@
       <div class="panel panel-default">
         <div class="panel-heading">Body Mass Calculator</div>
         <div class="panel-body">
-          Hola
+          <h3>Your Body Mass Index is: {{ $BMI }}</h3>
+          <p>That means you are <h4>{{ $range }}<h4></p>
         </div>
       </div>
     </div>

@@ -56,11 +56,27 @@ class HomeController extends Controller
 
       $user->records()->save($record);
 
+      $BMI = $request->weight / pow($request->height / 100,2);
+      $range = $this->getRange($BMI);
+
       return response()->view('calculator',[
         'status' => true,
-        'BMI' => $request->weight / pow($request->height / 100,2)
+        'BMI'    => $BMI,
+        'range'  => $range
       ],200);
 
       return response()->json($request);
+    }
+
+    public function getRange($BMI)
+    {
+      $range = '';
+      foreach ($this->range as $index => $text) {
+        if( $index > $BMI && $BMI ) {
+          return $range;
+        } else {
+          $range = $text;
+        }
+      }
     }
 }
