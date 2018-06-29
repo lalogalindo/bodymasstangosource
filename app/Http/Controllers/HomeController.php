@@ -9,6 +9,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $range = [
+      '0'  => 'Very severely underweight',
+      '15' => 'Severely underweight',
+      '16' => 'Underweight',
+      '18' => 'Normal (healthy weight)',
+      '25' => 'Overweight',
+      '30' => 'Obese Class I (Moderately obese)',
+      '35' => 'Obese Class II (Severely obese)',
+      '40' => 'Obese Class III (Very severely obese)',
+      '45' => 'Obese Class IV (Morbidly Obese)',
+      '50' => 'Obese Class V (Super Obese)',
+      '60' => 'Obese Class VI (Hyper Obese)'
+    ];
     /**
      * Create a new controller instance.
      *
@@ -26,7 +39,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('calculator');
     }
 
     public function records(\App\User $user)
@@ -49,10 +62,5 @@ class HomeController extends Controller
       ],200);
 
       return response()->json($request);
-    }
-
-    public function calculator()
-    {
-        return view('calculator');
     }
 }

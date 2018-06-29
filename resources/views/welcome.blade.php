@@ -10,6 +10,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
         <!-- Styles -->
         <style>
             html, body {
@@ -62,6 +65,13 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .text-justify {
+              text-align: justify;
+            }
+
+            p {
+              font-size: 17px;
+            }
         </style>
     </head>
     <body>
@@ -77,17 +87,19 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content container-fluid">
                 <div class="title m-b-md">
-                    Laravel
+                    Body Mass Index
                 </div>
-
+                <div class="row">
+                  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h3>Why Is a Healthy Weight Important?</h3>
+                    <p class="text-justify m-b-md">Reaching and maintaining a healthy weight is important for overall health and can help you prevent and control many diseases and conditions. If you are overweight or obese, you are at higher risk of developing serious health problems, including heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers. That is why maintaining a healthy weight is so important: It helps you lower your risk for developing these problems, helps you feel good about yourself, and gives you more energy to enjoy life. </p>
+                  </div>
+                </div>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://en.wikipedia.org/wiki/Body_mass_index">More on Wikipedia</a>
+                    <a href="https://github.com/lalogalindo">Github</a>
                 </div>
             </div>
         </div>

@@ -23,34 +23,34 @@
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
           @component('calculator.input',[
-            'title' => 'Height',
-            'inputID' => 'height',
+            'title'         => 'Height',
+            'inputID'       => 'height',
             'inputSliderID' => 'heightSlide',
-            'sliderID' => 'heightSlider',
-            'sliderMin' => '30',
-            'sliderMax' => '250',
-            'sliderStep' => '1',
-            'sliderValue' => '170',
-            'addOn' => 'cm',
-            'step' => '1'
+            'sliderID'      => 'heightSlider',
+            'sliderMin'     => '30',
+            'sliderMax'     => '250',
+            'sliderStep'    => '1',
+            'sliderValue'   => '170',
+            'addOn'         => 'cm',
+            'step'          => '1'
           ])
           @endcomponent
 
           @component('calculator.input',[
-            'title' => 'Weight',
-            'inputID' => 'weight',
+            'title'         => 'Weight',
+            'inputID'       => 'weight',
             'inputSliderID' => 'weightSlide',
-            'sliderID' => 'weightSlider',
-            'sliderMin' => '10',
-            'sliderMax' => '200',
-            'sliderStep' => '0.1',
-            'sliderValue' => '80',
-            'addOn' => 'kg',
-            'step' => '0.1'
+            'sliderID'      => 'weightSlider',
+            'sliderMin'     => '10',
+            'sliderMax'     => '200',
+            'sliderStep'    => '0.1',
+            'sliderValue'   => '80',
+            'addOn'         => 'kg',
+            'step'          => '0.1'
           ])
           @endcomponent
 
-            <div class="panel-footer text-right">
+            <div class="text-right">
               <button type="submit" class="btn btn-primary">Calculate</button>
             </div>
           </form>
