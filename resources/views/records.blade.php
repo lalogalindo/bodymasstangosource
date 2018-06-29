@@ -12,13 +12,23 @@
           In order to see the Body Mass Records, you must sign in.
           @else
 
-          <table>
-            @foreach($user->records as $record)
-            <tr>
-              <td>{{ $record->kilograms }} kg</<td>
-              <td>{{ $record->centimeters }} cm</<td>
-            </tr>
-            @endforeach
+          <table class="table table-hover table-striped">
+            <thead>
+              <th>Date of Measurement</th>
+              <th>Height</th>
+              <th>Weight</th>
+              <th>BMI</th>
+            </thead>
+            <tbody>
+              @foreach($user->records as $record)
+              <tr>
+                <td>{{ $record->created_at }}</td>
+                <td>{{ $record->kilograms }} kg</<td>
+                <td>{{ $record->centimeters }} cm</<td>
+                <td>{{ $record->kilograms / ( ($record->centimeters/100)*($record->centimeters/100) ) }}</td>
+              </tr>
+              @endforeach
+            </tbody>
           </table>
 
           @endguest
